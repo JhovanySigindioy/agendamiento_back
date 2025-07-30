@@ -1,5 +1,5 @@
 import { connectToDatabase } from "../config/dbPool";
-import { logger } from "../config/logger";
+import { logger } from "../utils/logger";
 import { IUserAuthenticated } from "../interfaces/res/IUserAutehticated";
 
 export async function authenticateUser(username: string, password: string): Promise<IUserAuthenticated | []> {
@@ -7,7 +7,7 @@ export async function authenticateUser(username: string, password: string): Prom
         const pool = await connectToDatabase();
         const request = pool.request();
         //const query = `SELECT username, email, roles, token FROM Usuarios WHERE Usuario = ${username} AND Contraseña = ${password}`;
-        
+
         const query = `SELECT Nombres, Apellidos  FROM Usuarios WHERE Usuario = ${username} AND Contraseña = ${password}`;
         const result = await request.query(query);
 

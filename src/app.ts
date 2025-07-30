@@ -1,7 +1,7 @@
 import app from "./config/server";
 
 import { connectToDatabase } from "./config/dbPool";
-import { logger } from "./config/logger";
+import { logger } from "./utils/logger";
 
 connectToDatabase();
 

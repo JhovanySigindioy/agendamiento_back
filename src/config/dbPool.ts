@@ -1,6 +1,6 @@
 import dbClient from 'mssql'
 import { dbConfig } from './dbConfig';
-import { logger } from './logger';
+import { logger } from '../utils/logger';
 
 logger.info("Configuración de la base de datos:", JSON.stringify(dbConfig, null, 2));
 
