@@ -2,8 +2,6 @@ import dbClient from 'mssql'
 import { dbConfig } from './dbConfig';
 import { logger } from '../utils/logger';
 
-logger.info("Configuración de la base de datos:", JSON.stringify(dbConfig, null, 2));
-
 export const connectToDatabase = async () => {
     try {
         const pool = await dbClient.connect({

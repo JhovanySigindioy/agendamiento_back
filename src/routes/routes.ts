@@ -7,8 +7,8 @@ router.get("/", (req, res) => {
     res.status(200).json({ message: "API de autenticación en funcionamiento" });
 });
 
-router.get("/pharmacys", (req, res) => {
-    getAllPharmacysController(res);
+router.get("/pharmacies", (req, res) => {
+    getAllPharmacysController(req, res);
 });
 
 
