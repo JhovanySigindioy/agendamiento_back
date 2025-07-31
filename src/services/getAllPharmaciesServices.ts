@@ -3,17 +3,33 @@ import { IDataPharmacy } from "../interfaces/IDataPharmacy";
 import { IResponseService } from "../interfaces/IResponseService";
 import { logger } from "../utils/logger";
 
-export async function getAllPharmacysServices(): Promise<IResponseService> {
+export async function getAllPharmaciesServices(): Promise<IResponseService> {
     try {
         const pool = await connectToDatabase();
         const request = pool.request();
 
-        const query = `SELECT IdBatallon, Departamento, Ciudad, Nombre FROM FarmaciasPonal`;
+        const query = `
+            SELECT
+                FP.IdBatallon,
+                FP.Departamento,
+                FP.Ciudad,
+                FP.Nombre AS NombreFarmacia,
+                FP.Horario,
+                DPP.direccion_drogueria,
+                DPP.telefonos_drogueria
+            FROM
+                FarmaciasPonal AS FP
+            INNER JOIN
+                dw__dim_pos AS DPP 
+            ON
+                FP.IdBatallon = DPP.pos;
+        `;
+
         const result = await request.query(query);
 
         if (result.recordset.length > 0) {
             return {
-                data: result.recordset[0] as IDataPharmacy,
+                data: result.recordset as IDataPharmacy[],
                 error: null
             };
         }

@@ -1,10 +1,11 @@
 
 import { Request, Response } from "express";
-import { getAllPharmacysServices } from "../services/getAllPharmacysServices";
+import { getAllPharmaciesServices } from "../services";
+
 
 export async function getAllPharmacysController(req: Request, res: Response): Promise<void> {
     try {
-        const { data, error } = await getAllPharmacysServices();
+        const { data, error } = await getAllPharmaciesServices();
         if (error) {
             res.status(500).json({ error, data: null });
             return;

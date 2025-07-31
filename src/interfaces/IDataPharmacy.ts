@@ -1,7 +1,9 @@
 export interface IDataPharmacy {
-    idBatallon: number;
-    departament: string;
-    city: string;
-    name: string;
-    phone?: string
+    IdBatallon: number;
+    Departamento: string;
+    Ciudad: string;
+    NombreFarmacia: string;
+    Horario: string;
+    direccion_drogueria: string;
+    telefonos_drogueria: string;
 }    
