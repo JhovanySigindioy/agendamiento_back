@@ -1,9 +1,9 @@
-import { connectToDatabase } from "../config/dbPool";
-import { IDataPharmacy } from "../interfaces/IDataPharmacy";
-import { IResponseService } from "../interfaces/IResponseService";
-import { logger } from "../utils/logger";
+import { connectToDatabase } from "../../config/dbPool";
+import { IResponse } from "../../interfaces";
+import { IDataPharmacy } from "../../interfaces/IDataPharmacy";
+import { logger } from "../../utils/logger";
 
-export async function getAllPharmaciesServices(): Promise<IResponseService> {
+export async function getAllPharmaciesServices(): Promise<any> {
     try {
         const pool = await connectToDatabase();
         const request = pool.request();
@@ -29,17 +29,20 @@ export async function getAllPharmaciesServices(): Promise<IResponseService> {
 
         if (result.recordset.length > 0) {
             return {
+                success: true,
                 data: result.recordset as IDataPharmacy[],
                 error: null
             };
         }
         return {
+            success: false,
             data: null,
             error: "No se encontraron registros de farmacias"
         };
     } catch (error) {
         logger.error("Error al obtener datos de las farmacias:", error);
         return {
+            success: false,
             data: null,
             error: `Error al obtener datos de las farmacias: ${error instanceof Error ? error.message : error}`
         }

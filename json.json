@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "data": [
+    {
+      "prescription": "2509219729",
+      "creationDate": "2025-09-30T16:01:23.000Z",
+      "doctor": "NATALESL",
+      "medications": [
+        {
+          "moleculeCode": "1093",
+          "medicine": "PREGABALINA 75 MG",
+          "dosage": "TOMAR 1 TABLETA VIA ORAL CADA 12 HORAS POR 1 MES",
+          "quantity": 60
+        },
+        {
+          "moleculeCode": "721",
+          "medicine": "TRIMETOPIM + SULFAMETOXAZOL 160+800 MG",
+          "dosage": "TOMAR 1 TABLETA LUNES , MIERCOLES Y VIERNES POR 1 MES",
+          "quantity": 40
+        },
+        {
+          "moleculeCode": "456",
+          "medicine": "CALCIO CARBONATO+VITAMINA D 600 MG (BASE) + 200 UI TAB",
+          "dosage": "TOMAR 1 TABLETA CADA 24 HORAS POR 1 MES",
+          "quantity": 30
+        },
+        {
+          "moleculeCode": "3617",
+          "medicine": "TAPENTADOL 50 MG LIBERACION SOSTENIDA",
+          "dosage": "TOMAR 1 TABLEA VIA ORAL CADA 8 HORAS SOLO SI HAY DOLOR POR 1 MES",
+          "quantity": 120
+        },
+        {
+          "moleculeCode": "2177",
+          "medicine": "LENALIDOMIDA CAP X 15 MG",
+          "dosage": "TOMAR DEL DIA 1 AL 21 Y DESACANSAR 7 DIAS, POR 1 MES",
+          "quantity": 21
+        }
+      ]
+    },
+    {
+      "prescription": "2510183369",
+      "creationDate": "2025-10-27T14:11:24.000Z",
+      "doctor": "NATALESL",
+      "medications": [
+        {
+          "moleculeCode": "1093",
+          "medicine": "PREGABALINA 75 MG",
+          "dosage": "TOMAR  1 TABLETA CADA 12 HORAS POR 1 MES",
+          "quantity": 60
+        },
+        {
+          "moleculeCode": "2177",
+          "medicine": "LENALIDOMIDA CAP X 15 MG",
+          "dosage": "TOMAR 1 TABLETA CADA DIA POR 21 DIAS Y DESCANSAR 7 DIAS POR 1 MES",
+          "quantity": 21
+        },
+        {
+          "moleculeCode": "721",
+          "medicine": "TRIMETOPIM + SULFAMETOXAZOL 160+800 MG",
+          "dosage": "TOMAR LUNES MIERCOLES Y VIERNES POR 1 MES",
+          "quantity": 20
+        },
+        {
+          "moleculeCode": "456",
+          "medicine": "CALCIO CARBONATO+VITAMINA D 600 MG (BASE) + 200 UI TAB",
+          "dosage": "TOMAR  1 TABLETA CADA DIA POR 1 MES",
+          "quantity": 30
+        }
+      ]
+    }
+  ],
+  "error": null
+}
