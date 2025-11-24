@@ -18,8 +18,6 @@ export const validatePrescriptionBelongsToPatientService = async (idPaciente: st
         `;
 
         const result = await request.query(query);
-
-        // Si no existe, retornamos null para que el controller lo interprete
         return result.recordset.length > 0 ? result.recordset[0] : null;
 
     } catch (error: any) {

@@ -19,7 +19,7 @@ export const getPrescriptionsByIdService = async (idPaciente: string): Promise<I
                 cantidad            AS quantity
             FROM ponalFormulas
             WHERE idPaciente = @idPaciente
-              AND DATEDIFF(DAY, fechaEvolucion, GETDATE()) < 60
+              AND DATEDIFF(DAY, fechaEvolucion, GETDATE()) < 30
             ORDER BY formula;
         `;
 
